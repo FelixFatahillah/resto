@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "4690b3b2-26da-4205-8511-1306abf1f289",
+		"name": "Tlab Resto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13698264"
+	},
+	"item": [
+		{
+			"name": "Ingredient",
+			"item": [
+				{
+					"name": "Add Ingredient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cabe MERAH\",\r\n    \"measurement\": \"pcs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/add-ingredient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Ingredient",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/search-ingredient/:name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search-ingredient",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": "cabE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All Ingredient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/show-ingredient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"show-ingredient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Ingredient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"merica\",\r\n    \"measurement\": \"gram\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/edit-ingredient/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"edit-ingredient",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ingredient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/delete-ingredient/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delete-ingredient",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu Recipe",
+			"item": [
+				{
+					"name": "Add New Menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rawon\",\r\n    \"category\": \"main course\",\r\n    \"recipe\": [\r\n        {\r\n            \"ingredient\": \"cabe\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"ingredient\": \"bawang merah\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"ingredient\": \"kluwek\",\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/add-menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"add-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/show-menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"show-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Detail Menu Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/detail-menu/:menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"detail-menu",
+								":menu"
+							],
+							"variable": [
+								{
+									"key": "menu",
+									"value": "rendang"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Menu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/search-menu/:name",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"search-menu",
+								":name"
+							],
+							"variable": [
+								{
+									"key": "name",
+									"value": "ren"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Menu Recipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"rendang\",\r\n    \"category\": \"main course\",\r\n    \"recipe\": [\r\n        {\r\n            \"ingredient\": \"cabe\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"ingredient\": \"bawang merah\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"ingredient\": \"bawang putih\",\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/edit-menu/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"edit-menu",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Menu Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/delete-menu/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"delete-menu",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
